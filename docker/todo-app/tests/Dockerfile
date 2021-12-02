@@ -1,6 +1,5 @@
-FROM node:14-alpine AS build
+FROM mjgargani/puppeteer:trybe1.0
 WORKDIR /todo-app
-COPY . /front-end
-EXPOSE 3000
+COPY . /tests
 # ENTRYPOINT [ "bin/bash" ]
-CMD ["npm", "start"]
+CMD ["npm", "test"]
